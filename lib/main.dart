@@ -13,11 +13,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // เมธอด build() ส่งคืนโครงสร้างต้นไม้วิดเจ็ตสำหรับวิดเจ็ตนี้
     return MaterialApp(
+      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme :  ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
-        //useMaterial3: true, // ใช้ Material Design 3
+        useMaterial3: true, // ใช้ Material Design 3
       ),
-      title: 'Flutter Demo',
       home: const MyHomePage(), // กำหนดหน้าแรกของแอป
     );
   }
@@ -28,7 +29,8 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold( // ให้โครงสร้างแอปพื้นฐาน
+    return Scaffold( 
+      // ให้โครงสร้างแอปพื้นฐาน
       appBar: AppBar(
         title: const Text('Home Page'),
         backgroundColor: Colors.blue, // ปรับแต่งสี AppBar
