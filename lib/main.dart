@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // เมธอด build() ส่งคืนโครงสร้างต้นไม้วิดเจ็ตสำหรับวิดเจ็ตนี้
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Demo', // ชื่อแอป
       debugShowCheckedModeBanner: false,
       theme :  ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
@@ -32,7 +32,7 @@ class MyHomePage extends StatelessWidget {
     return Scaffold( 
       // ให้โครงสร้างแอปพื้นฐาน
       appBar: AppBar(
-        title: const Text('Home Page'),
+        title: const Text('Home Page'), // กำหนดชื่อ AppBar
         backgroundColor: Colors.blue, // ปรับแต่งสี AppBar
       ),
       body: Center( //center ใช้จัดการ Layout ให้อยู่ตรงกลาง
