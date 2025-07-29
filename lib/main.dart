@@ -34,24 +34,23 @@ class MyHomePage extends StatelessWidget {
         backgroundColor: Colors.blue, // ปรับแต่งสี AppBar
       ),
       body: Center( //center ใช้จัดการ Layout ให้อยู่ตรงกลาง
-        //mainAxisAlignment: MainAxisAlignment.center, // จัดตำแหน่งวิด
         child: Container( //กล่อง
-          padding: EdgeInsets.all(50.0),
+          padding: EdgeInsets.all(10.0), // กำหนด Padding รอบๆ Container
           width: 300.0,
-          height: 200.0,
-          //color: Colors.amber, // กำหนดสีพื้นหลังของ Container
-          
+          height: 150.0,
           decoration: BoxDecoration(
-            color: Colors.amber,
-            borderRadius: BorderRadius.all(Radius.circular(20.0)), // มุมโค้งมน
+            color: Colors.amber, // ใช้สีเพียงสีเดียวใน decoration
+            borderRadius: BorderRadius.horizontal(
+              left: Radius.circular(10.0), // มุมโค้งมนด้านซ้าย
+              right: Radius.elliptical(50.0, 10), // มุมโค้งมนด้านขวา
+            ), // มุมโค้งมน
           ),
-
-          child : const Text(
-            'inside Container',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 20.0,
-              color: Colors.brown),
+          child: Center(
+            child: Image.asset('assets/image/image.png',
+            width: 150.0, // กำหนดความกว้างของรูปภาพ
+            //height: 150.0, // กำหนดความสูงของรูปภาพ
+            fit: BoxFit.contain, // ปรับขนาดรูปภาพให้เต็มพื้นที่
+            ),
           )
         )
       ),
@@ -66,5 +65,3 @@ class MyHomePage extends StatelessWidget {
     );
   }
 }
-
-
